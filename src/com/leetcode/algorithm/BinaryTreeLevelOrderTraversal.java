@@ -1,18 +1,19 @@
-package com.leetcode.algorithm.tree;
+package com.leetcode.algorithm;
 
 import com.leetcode.data.TreeNode;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 /**
- * @see https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/
- * No.: 107
+ * @see https://leetcode.com/problems/binary-tree-level-order-traversal/description/
+ * No.: 102
  * Tag: Binary Tree
  * Tag: Level Order
  */
-public class BinaryTreeLevelOrderTraversal_II {
+public class BinaryTreeLevelOrderTraversal {
     public static void main(String[] args) {
         TreeNode node1 = new TreeNode(3);
         TreeNode node2 = new TreeNode(9);
@@ -26,12 +27,12 @@ public class BinaryTreeLevelOrderTraversal_II {
         node2.left = node4;
         node2.right = node5;
 
-        System.out.println(new BinaryTreeLevelOrderTraversal_II().levelOrderBottom(node1));
+        System.out.println(new BinaryTreeLevelOrderTraversal().levelOrder(node1));
     }
 
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
-        LinkedList<List<Integer>> levels = new LinkedList<>();
+        List<List<Integer>> levels = new ArrayList<>();
 
         if (root == null)
             return levels;
@@ -41,7 +42,7 @@ public class BinaryTreeLevelOrderTraversal_II {
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            LinkedList<Integer> list = new LinkedList<>();
+            ArrayList<Integer> list = new ArrayList<>();
             size = queue.size();
 
             while (size > 0) {
@@ -59,7 +60,7 @@ public class BinaryTreeLevelOrderTraversal_II {
                 size--;
             }
 
-            levels.addFirst(list);
+            levels.add(list);
         }
 
         return levels;

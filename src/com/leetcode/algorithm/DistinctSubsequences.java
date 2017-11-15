@@ -1,4 +1,4 @@
-package com.leetcode.algorithm.tree;
+package com.leetcode.algorithm;
 
 /**
  * @see https://leetcode.com/problems/distinct-subsequences/description/
