@@ -4,10 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * @see url
- * Tag:
- */
 public class PalindromePartitioningIITest {
     @Test
     public void minCut() throws Exception {

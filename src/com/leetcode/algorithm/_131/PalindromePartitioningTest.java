@@ -4,10 +4,6 @@ import org.junit.Test;
 
 import java.util.List;
 
-/**
- * @see url
- * Tag:
- */
 public class PalindromePartitioningTest {
     @Test
     public void partition() throws Exception {
