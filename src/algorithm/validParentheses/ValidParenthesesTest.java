@@ -10,21 +10,21 @@ import java.util.stream.Stream;
 
 public class ValidParenthesesTest {
 
-    @ParameterizedTest
-    @MethodSource("testCaseProvider")
-    public void testValidParentheses(final String input, final boolean result) {
-        assertEquals(new ValidParentheses().isValid(input), result);
-    }
+  @ParameterizedTest
+  @MethodSource("testCaseProvider")
+  public void testValidParentheses(final String input, final boolean result) {
+    assertEquals(new ValidParentheses().isValid(input), result);
+  }
 
-    static Stream<Arguments> testCaseProvider() {
-        return Stream.of(
-            Arguments.of("()", true),
-            Arguments.of("()[]{}", true),
-            Arguments.of("{[]}", true),
-            Arguments.of("(", false),
-            Arguments.of(")", false),
-            Arguments.of("(]", false),
-            Arguments.of("([)]", false)
-        );
-    }
+  static Stream<Arguments> testCaseProvider() {
+    return Stream.of(
+        Arguments.of("()", true),
+        Arguments.of("()[]{}", true),
+        Arguments.of("{[]}", true),
+        Arguments.of("(", false),
+        Arguments.of(")", false),
+        Arguments.of("(]", false),
+        Arguments.of("([)]", false)
+    );
+  }
 }
