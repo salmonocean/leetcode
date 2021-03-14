@@ -13,7 +13,7 @@ public class TwoSumTest {
   @ParameterizedTest
   @MethodSource("testCaseProvider")
   public void testTwoSum(int[] input, int target, int[] result) {
-    assertArrayEquals(new TwoSum().twoSum(input, target), result);
+    assertArrayEquals(result, new TwoSum().twoSum(input, target));
   }
 
   static Stream<Arguments> testCaseProvider() {
