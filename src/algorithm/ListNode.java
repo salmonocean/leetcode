@@ -1,12 +1,12 @@
-package algorithm.addTwoNumbers;
+package algorithm;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class ListNode {
-  int val;
-  ListNode next;
+  public int val;
+  public ListNode next;
 
   public ListNode() {
   }

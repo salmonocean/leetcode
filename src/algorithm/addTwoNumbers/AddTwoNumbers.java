@@ -1,5 +1,7 @@
 package algorithm.addTwoNumbers;
 
+import algorithm.ListNode;
+
 public class AddTwoNumbers {
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode node1 = l1;
